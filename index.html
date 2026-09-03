@@ -22,40 +22,49 @@
     </style>
 </head>
 
-<body class="bg-[#ebedf1]">
-    <header class="space-y-2 w-[90%] pb-3 mx-auto sticky top-0 bg-[#ebedf1]">
-        <h1 class="text-blue-950 text-2xl sm:text-3xl font-bold pt-2">Job Application Tracker</h1>
-        <div class="grid grid-cols-3 gap-3 mb-3">
-            <div class="bg-white rounded p-1 sm:p-3 text-center sm:text-left">
-                <p class="text-gray-600 font-medium">Total</p>
-                <p class="text-blue-950 font-bold text-2xl sm:text-3xl" id="total-count">8</p>
-            </div>
+<body class="bg-[#ebedf1] max-w-450 mx-auto">
+    <header class="space-y-2 pb-3 sticky top-0 bg-[#ebedf1]">
+        <section class="w-[90%] mx-auto">
+            <h1 class="text-blue-950 text-2xl sm:text-3xl font-bold pt-2">Job Application Tracker</h1>
+            <div class="grid grid-cols-3 gap-3 mb-3">
+                <div class="bg-white rounded p-1 sm:p-3 text-center sm:text-left">
+                    <p class="text-gray-600 font-medium">Total</p>
+                    <p class="text-blue-950 font-bold text-2xl sm:text-3xl" id="total-count">8</p>
+                </div>
 
-            <div class="bg-white rounded p-1 sm:p-3 text-center sm:text-left">
-                <p class="text-gray-600 font-medium">Interview</p>
-                <p class="text-green-600 text-2xl sm:text-3xl font-bold" id="interview-count">0</p>
-            </div>
+                <div class="bg-white rounded p-1 sm:p-3 text-center sm:text-left">
+                    <p class="text-gray-600 font-medium">Interview</p>
+                    <p class="text-green-600 text-2xl sm:text-3xl font-bold" id="interview-count">0</p>
+                </div>
 
-            <div class="bg-white rounded p-1 sm:p-3 text-center sm:text-left">
-                <p class="text-gray-600 font-medium">Rejected</p>
-                <p class="text-red-600 font-bold text-2xl sm:text-3xl" id="rejected-count">0</p>
+                <div class="bg-white rounded p-1 sm:p-3 text-center sm:text-left">
+                    <p class="text-gray-600 font-medium">Rejected</p>
+                    <p class="text-red-600 font-bold text-2xl sm:text-3xl" id="rejected-count">0</p>
+                </div>
             </div>
-        </div>
-        <hr class="text-gray-300 pb-3 block items-center">
-        <section class="flex justify-between items-center">
-            <h2 class="text-blue-950 text-xl sm:text-2xl font-bold">Available Jobs</h2>
-            <p><span id="available-total">8</span> Job<span id="sss">s</span></p>
         </section>
-        <section id="toggle-btn-section" class=" space-x-1 sm:space-x-2">
-            <button id="btn-all"
-                class="border-gray-700 border-2 rounded-[5px] px-3 sm:px-6 py-1 sm:py-2 text-white bg-blue-700 cursor-pointer">All</button>
 
-            <button id="btn-interview"
-                class="border-gray-700 border-2 rounded-[5px] px-3 sm:px-6 py-1 sm:py-2 cursor-pointer">Interview</button>
+        <hr class="text-gray-300">
 
-            <button id="btn-reject"
-                class="border-gray-700 border-2 rounded-[5px] px-3 sm:px-6 py-1 sm:py-2 cursor-pointer">Rejected</button>
+        <section class="w-[90%] mx-auto space-y-2">
+            <section class="flex justify-between items-center">
+                <h2 class="text-blue-950 text-xl sm:text-2xl font-bold">Available Jobs</h2>
+                <p><span id="available-total">8</span> Job<span id="sss">s</span></p>
+            </section>
+            <section id="toggle-btn-section" class=" space-x-1 sm:space-x-2">
+                <button id="btn-all"
+                    class="border-gray-700 border-2 rounded-[5px] px-3 sm:px-6 py-1 sm:py-2 text-white bg-blue-700 cursor-pointer">All</button>
+
+                <button id="btn-interview"
+                    class="border-gray-700 border-2 rounded-[5px] px-3 sm:px-6 py-1 sm:py-2 cursor-pointer">Interview</button>
+
+                <button id="btn-reject"
+                    class="border-gray-700 border-2 rounded-[5px] px-3 sm:px-6 py-1 sm:py-2 cursor-pointer">Rejected</button>
+            </section>
         </section>
+
+
+
     </header>
 
     <main class="space-y-2 w-[90%] mx-auto my-2">
@@ -74,8 +83,12 @@
                         </div>
                     </div>
                     <ul class="flex flex-col sm:flex-row gap-3">
-                        <li class="list-disc list-inside sm:list-none sm:after:content-['•'] after:ml-2 after:font-bold">Remote</li>
-                        <li class="list-disc list-inside sm:list-none sm:after:content-['•'] after:ml-2 after:font-bold">Full-time</li>
+                        <li
+                            class="list-disc list-inside sm:list-none sm:after:content-['•'] after:ml-2 after:font-bold">
+                            Remote</li>
+                        <li
+                            class="list-disc list-inside sm:list-none sm:after:content-['•'] after:ml-2 after:font-bold">
+                            Full-time</li>
                         <li class="list-disc list-inside sm:list-none">$130,000 - $175,000</li>
                     </ul>
                     <div class="space-y-9">
@@ -108,8 +121,12 @@
                         </div>
                     </div>
                     <ul class="flex flex-col sm:flex-row gap-3">
-                        <li class="list-disc list-inside sm:list-none sm:after:content-['•'] after:ml-2 after:font-bold">Remote</li>
-                        <li class="list-disc list-inside sm:list-none sm:after:content-['•'] after:ml-2 after:font-bold">Full-time</li>
+                        <li
+                            class="list-disc list-inside sm:list-none sm:after:content-['•'] after:ml-2 after:font-bold">
+                            Remote</li>
+                        <li
+                            class="list-disc list-inside sm:list-none sm:after:content-['•'] after:ml-2 after:font-bold">
+                            Full-time</li>
                         <li class="list-disc list-inside sm:list-none">$130,000 - $175,000</li>
                     </ul>
                     <div class="space-y-9">
@@ -142,8 +159,12 @@
                         </div>
                     </div>
                     <ul class="flex flex-col sm:flex-row gap-3">
-                        <li class="list-disc list-inside sm:list-none sm:after:content-['•'] after:ml-2 after:font-bold">Remote</li>
-                        <li class="list-disc list-inside sm:list-none sm:after:content-['•'] after:ml-2 after:font-bold">Full-time</li>
+                        <li
+                            class="list-disc list-inside sm:list-none sm:after:content-['•'] after:ml-2 after:font-bold">
+                            Remote</li>
+                        <li
+                            class="list-disc list-inside sm:list-none sm:after:content-['•'] after:ml-2 after:font-bold">
+                            Full-time</li>
                         <li class="list-disc list-inside sm:list-none">$130,000 - $175,000</li>
                     </ul>
                     <div class="space-y-9">
@@ -176,8 +197,12 @@
                         </div>
                     </div>
                     <ul class="flex flex-col sm:flex-row gap-3">
-                        <li class="list-disc list-inside sm:list-none sm:after:content-['•'] after:ml-2 after:font-bold">Remote</li>
-                        <li class="list-disc list-inside sm:list-none sm:after:content-['•'] after:ml-2 after:font-bold">Full-time</li>
+                        <li
+                            class="list-disc list-inside sm:list-none sm:after:content-['•'] after:ml-2 after:font-bold">
+                            Remote</li>
+                        <li
+                            class="list-disc list-inside sm:list-none sm:after:content-['•'] after:ml-2 after:font-bold">
+                            Full-time</li>
                         <li class="list-disc list-inside sm:list-none">$130,000 - $175,000</li>
                     </ul>
                     <div class="space-y-9">
@@ -210,8 +235,12 @@
                         </div>
                     </div>
                     <ul class="flex flex-col sm:flex-row gap-3">
-                        <li class="list-disc list-inside sm:list-none sm:after:content-['•'] after:ml-2 after:font-bold">Remote</li>
-                        <li class="list-disc list-inside sm:list-none sm:after:content-['•'] after:ml-2 after:font-bold">Full-time</li>
+                        <li
+                            class="list-disc list-inside sm:list-none sm:after:content-['•'] after:ml-2 after:font-bold">
+                            Remote</li>
+                        <li
+                            class="list-disc list-inside sm:list-none sm:after:content-['•'] after:ml-2 after:font-bold">
+                            Full-time</li>
                         <li class="list-disc list-inside sm:list-none">$130,000 - $175,000</li>
                     </ul>
                     <div class="space-y-9">
@@ -244,8 +273,12 @@
                         </div>
                     </div>
                     <ul class="flex flex-col sm:flex-row gap-3">
-                        <li class="list-disc list-inside sm:list-none sm:after:content-['•'] after:ml-2 after:font-bold">Remote</li>
-                        <li class="list-disc list-inside sm:list-none sm:after:content-['•'] after:ml-2 after:font-bold">Full-time</li>
+                        <li
+                            class="list-disc list-inside sm:list-none sm:after:content-['•'] after:ml-2 after:font-bold">
+                            Remote</li>
+                        <li
+                            class="list-disc list-inside sm:list-none sm:after:content-['•'] after:ml-2 after:font-bold">
+                            Full-time</li>
                         <li class="list-disc list-inside sm:list-none">$130,000 - $175,000</li>
                     </ul>
                     <div class="space-y-9">
@@ -278,8 +311,12 @@
                         </div>
                     </div>
                     <ul class="flex flex-col sm:flex-row gap-3">
-                        <li class="list-disc list-inside sm:list-none sm:after:content-['•'] after:ml-2 after:font-bold">Remote</li>
-                        <li class="list-disc list-inside sm:list-none sm:after:content-['•'] after:ml-2 after:font-bold">Full-time</li>
+                        <li
+                            class="list-disc list-inside sm:list-none sm:after:content-['•'] after:ml-2 after:font-bold">
+                            Remote</li>
+                        <li
+                            class="list-disc list-inside sm:list-none sm:after:content-['•'] after:ml-2 after:font-bold">
+                            Full-time</li>
                         <li class="list-disc list-inside sm:list-none">$130,000 - $175,000</li>
                     </ul>
                     <div class="space-y-9">
@@ -312,8 +349,12 @@
                         </div>
                     </div>
                     <ul class="flex flex-col sm:flex-row gap-3">
-                        <li class="list-disc list-inside sm:list-none sm:after:content-['•'] after:ml-2 after:font-bold">Remote</li>
-                        <li class="list-disc list-inside sm:list-none sm:after:content-['•'] after:ml-2 after:font-bold">Full-time</li>
+                        <li
+                            class="list-disc list-inside sm:list-none sm:after:content-['•'] after:ml-2 after:font-bold">
+                            Remote</li>
+                        <li
+                            class="list-disc list-inside sm:list-none sm:after:content-['•'] after:ml-2 after:font-bold">
+                            Full-time</li>
                         <li class="list-disc list-inside sm:list-none">$130,000 - $175,000</li>
                     </ul>
                     <div class="space-y-9">
