@@ -119,6 +119,7 @@ document.getElementById("jobs-container").addEventListener("click", function (ev
     // when action-btn-interview get a click
     if (targetElement.classList.contains("interview")) {
         targetCard.querySelector(".current-status").innerText = "interview";
+        targetCard.querySelector(".current-status").classList.remove("text-red-700");
         targetCard.querySelector(".current-status").classList.add("text-green-700");
         targetCard.classList.add("interview-card");
         targetCard.classList.remove("rejected-card");
@@ -126,6 +127,7 @@ document.getElementById("jobs-container").addEventListener("click", function (ev
     // when action-btn-rejected get a click
     if (targetElement.classList.contains("rejected")) {
         targetCard.querySelector(".current-status").innerText = "rejected";
+        targetCard.querySelector(".current-status").classList.remove("text-green-700");
         targetCard.querySelector(".current-status").classList.add("text-red-700");
         targetCard.classList.add("rejected-card");
         targetCard.classList.remove("interview-card");

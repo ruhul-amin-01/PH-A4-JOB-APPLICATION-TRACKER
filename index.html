@@ -23,9 +23,9 @@
 </head>
 
 <body class="bg-[#ebedf1]">
-    <header class="space-y-5 w-[90%] mx-auto sticky top-0 bg-[#ebedf1]">
-        <h1 class="text-blue-950 text-3xl font-bold pt-3">Job Application Tracker</h1>
-        <div class="grid grid-cols-3 gap-3">
+    <header class="space-y-2 w-[90%] pb-3 mx-auto sticky top-0 bg-[#ebedf1]">
+        <h1 class="text-blue-950 text-2xl sm:text-3xl font-bold pt-2">Job Application Tracker</h1>
+        <div class="grid grid-cols-3 gap-3 mb-3">
             <div class="bg-white rounded p-1 sm:p-3 text-center sm:text-left">
                 <p class="text-gray-600 font-medium">Total</p>
                 <p class="text-blue-950 font-bold text-2xl sm:text-3xl" id="total-count">8</p>
@@ -41,12 +41,9 @@
                 <p class="text-red-600 font-bold text-2xl sm:text-3xl" id="rejected-count">0</p>
             </div>
         </div>
-        <hr class="text-gray-300">
-    </header>
-
-    <main class="space-y-5 w-[90%] mx-auto my-5">
+        <hr class="text-gray-300 pb-3 block items-center">
         <section class="flex justify-between items-center">
-            <h2 class="text-blue-950 text-2xl font-bold">Available Jobs</h2>
+            <h2 class="text-blue-950 text-xl sm:text-2xl font-bold">Available Jobs</h2>
             <p><span id="available-total">8</span> Job<span id="sss">s</span></p>
         </section>
         <section id="toggle-btn-section" class=" space-x-1 sm:space-x-2">
@@ -59,6 +56,9 @@
             <button id="btn-reject"
                 class="border-gray-700 border-2 rounded-[5px] px-3 sm:px-6 py-1 sm:py-2 cursor-pointer">Rejected</button>
         </section>
+    </header>
+
+    <main class="space-y-2 w-[90%] mx-auto my-2">
         <section id="jobs-container" class="space-y-5">
             <div class="card active-card bg-white p-5 rounded-[10px]">
                 <div class="space-y-5">
