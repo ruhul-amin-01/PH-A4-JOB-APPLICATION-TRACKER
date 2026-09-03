@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Tracker</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- Google Font -- Geist -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap');
+
+        * {
+            font-family: "Geist", sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-[#ebedf1]">
+    <header class="space-y-5 w-[90%] mx-auto sticky top-0 bg-[#ebedf1]">
+        <h1 class="text-blue-950 text-3xl font-bold pt-3">Job Application Tracker</h1>
+        <div class="grid grid-cols-3 gap-3">
+            <div class="bg-white rounded p-1 sm:p-3 text-center sm:text-left">
+                <p class="text-gray-600 font-medium">Total</p>
+                <p class="text-blue-950 font-bold text-2xl sm:text-3xl" id="total-count">8</p>
+            </div>
+
+            <div class="bg-white rounded p-1 sm:p-3 text-center sm:text-left">
+                <p class="text-gray-600 font-medium">Interview</p>
+                <p class="text-green-600 text-2xl sm:text-3xl font-bold" id="interview-count">0</p>
+            </div>
+
+            <div class="bg-white rounded p-1 sm:p-3 text-center sm:text-left">
+                <p class="text-gray-600 font-medium">Rejected</p>
+                <p class="text-red-600 font-bold text-2xl sm:text-3xl" id="rejected-count">0</p>
+            </div>
+        </div>
+        <hr class="text-gray-300">
+    </header>
+
+    <main class="space-y-5 w-[90%] mx-auto my-5">
+        <section class="flex justify-between items-center">
+            <h2 class="text-blue-950 text-2xl font-bold">Available Jobs</h2>
+            <p><span id="available-total">8</span> Job<span id="sss">s</span></p>
+        </section>
+        <section id="toggle-btn-section" class=" space-x-1 sm:space-x-2">
+            <button id="btn-all"
+                class="border-gray-700 border-2 rounded-[5px] px-3 sm:px-6 py-1 sm:py-2 text-white bg-blue-700 cursor-pointer">All</button>
+
+            <button id="btn-interview"
+                class="border-gray-700 border-2 rounded-[5px] px-3 sm:px-6 py-1 sm:py-2 cursor-pointer">Interview</button>
+
+            <button id="btn-reject"
+                class="border-gray-700 border-2 rounded-[5px] px-3 sm:px-6 py-1 sm:py-2 cursor-pointer">Rejected</button>
+        </section>
+        <section id="jobs-container" class="space-y-5">
+            <div class="card active-card bg-white p-5 rounded-[10px]">
+                <div class="space-y-5">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <h2 class="text-xl font-bold text-blue-950">Mobile First Corp</h2>
+                            <p>React Native Developer</p>
+                        </div>
+                        <div>
+                            <button
+                                class="text-2xl text-center text-red-900 border rounded-[50%] p-1 cursor-pointer delete"><i
+                                    class="fa fa-trash" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <p class="after:content-['•'] after:ml-2 after:font-bold">Remote</p>
+                        <p class="after:content-['•'] after:ml-2 after:font-bold">Full-time</p>
+                        <p>$130,000 - $175,000</p>
+                    </div>
+                    <div class="space-y-9">
+                        <p class="uppercase text-blue-950 bg-[#e7eef5] inline py-2 px-3 rounded current-status">Not
+                            Applied</p>
+                        <p class="my-5 text-[14px]">Build cross-platform mobile applications using React Native.
+                            Work on
+                            products used by millions of users worldwide.</p>
+                    </div>
+                    <div class="space-x-5">
+                        <button
+                            class="uppercase text-green-600 border-green-600 border-2 rounded py-2 px-4 cursor-pointer interview">interview</button>
+                        <button
+                            class="uppercase text-red-600 border-red-600 border-2 rounded py-2 px-4 cursor-pointer rejected">Rejected</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card active-card bg-white p-5 rounded-[10px]">
+                <div class="space-y-5">
+                    <div class="flex justify-between">
+                        <div>
+                            <h2 class="text-xl font-bold text-blue-950">WebFlow Agency</h2>
+                            <p>React Native Developer</p>
+                        </div>
+                        <div>
+                            <button
+                                class="text-2xl text-center text-red-900 border rounded-[50%] p-1 cursor-pointer delete"><i
+                                    class="fa fa-trash" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <p class="after:content-['•'] after:ml-2 after:font-bold">Remote</p>
+                        <p class="after:content-['•'] after:ml-2 after:font-bold">Full-time</p>
+                        <p>$130,000 - $175,000</p>
+                    </div>
+                    <div class="space-y-9">
+                        <p class="uppercase text-blue-950 bg-[#e7eef5] inline py-2 px-3 rounded current-status">Not
+                            Applied</p>
+                        <p class="my-5 text-[14px]">Build cross-platform mobile applications using React Native.
+                            Work on
+                            products used by millions of users worldwide.</p>
+                    </div>
+                    <div class="space-x-5">
+                        <button
+                            class="uppercase text-green-600 border-green-600 border-2 rounded py-2 px-4 cursor-pointer interview">interview</button>
+                        <button
+                            class="uppercase text-red-600 border-red-600 border-2 rounded py-2 px-4 cursor-pointer rejected">Rejected</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card active-card bg-white p-5 rounded-[10px]">
+                <div class="space-y-5">
+                    <div class="flex justify-between">
+                        <div>
+                            <h2 class="text-xl font-bold text-blue-950">Graphics Honda</h2>
+                            <p>React Native Developer</p>
+                        </div>
+                        <div>
+                            <button
+                                class="text-2xl text-center text-red-900 border rounded-[50%] p-1 cursor-pointer delete"><i
+                                    class="fa fa-trash" aria-hidden="true"></i></button>
+                        </div>
+                    </div>
+                    <div class="flex gap-3">
+                        <p class="after:content-['•'] after:ml-2 after:font-bold">Remote</p>
+                        <p class="after:content-['•'] after:ml-2 after:font-bold">Full-time</p>
+                        <p>$130,000 - $175,000</p>
+                    </div>
+                    <div class="space-y-9">
+                        <p class="uppercase text-blue-950 bg-[#e7eef5] inline py-2 px-3 rounded current-status">Not
+                            Applied</p>
+                        <p class="my-5 text-[14px]">Build cross-platform mobile applications using React Native.
+                            Work on
+                            products used by millions of users worldwide.</p>
+                    </div>
+                    <div class="space-x-5">
+                        <button
+                            class="uppercase text-green-600 border-green-600 border-2 rounded py-2 px-4 cursor-pointer interview">interview</button>
+                        <button
+                            class="uppercase text-red-600 border-red-600 border-2 rounded py-2 px-4 cursor-pointer rejected">Rejected</button>
+                    </div>
+                </div>
+            </div>
+            <div id="no-job" class="card space-y-2 hidden text-center bg-white pt-30 pb-10 rounded-[10px]">
+                <i class="fa-solid fa-file-lines text-6xl text-blue-500"></i>
+                <h2 class="capitalize text-1xl text-shadow-blue-950 font-bold">No jobs available</h2>
+                <p>Check back soon for new job opportunities</p>
+            </div>
+
+        </section>
+    </main>
+
+
+
+
+
+
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
