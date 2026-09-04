@@ -1,6 +1,4 @@
 //global Variables
-let currentTab = "all";
-const Tabs = ["all", "interview", "reject"];
 const btnAll = document.getElementById("btn-all");
 const btnInterview = document.getElementById("btn-interview");
 const btnReject = document.getElementById("btn-reject");
@@ -14,6 +12,19 @@ const allInterviewJobs = document.getElementsByClassName("interview-card");
 const allRejectedJobs = document.getElementsByClassName("rejected-card");
 const availableTotal = document.getElementById("available-total");
 const noJob = document.getElementById("no-job");
+
+// testing only
+console.log("getElementById", btnAll, typeof btnAll)
+console.log("getElementsByClassName", allActiveJobs, typeof allActiveJobs)
+
+const allActiveCard = document.querySelectorAll(".active-card")
+console.log("querySelectorAll",allActiveCard,typeof allActiveCard)
+
+const firstActiveCard = document.querySelector(".active-card")
+console.log("querySelector", firstActiveCard, typeof firstActiveCard)
+
+document.createElement("div")
+
 
 // by default
 btnAll.classList.add(...activeBtn);
